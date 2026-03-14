@@ -58,6 +58,15 @@ export const auth = betterAuth({
     "http://localhost:3000",
     "https://finveda-neon.vercel.app"
   ],
+   cookies: {
+    sessionToken: {
+      attributes: {
+        secure: true,
+        sameSite: "lax",
+        path: "/"
+      }
+    }
+  },
 
   database: prismaAdapter(db, {
     provider: "postgresql",
