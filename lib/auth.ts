@@ -2,7 +2,8 @@
 import { betterAuth } from "better-auth"
 import { prismaAdapter } from "better-auth/adapters/prisma"
 import { db } from "./db"
-
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 
 export const auth = betterAuth({
@@ -30,7 +31,7 @@ export const auth = betterAuth({
   //     }
   //   }
   // },
-
+  console.log("Runtime check1");
   database: prismaAdapter(db, {
     provider: "postgresql",
   }),
@@ -40,6 +41,7 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true
   },
+  console.log("Runtime check");
 
   socialProviders: {
     google: {
