@@ -19,17 +19,17 @@ export const auth = betterAuth({
     useSecureCookies: true,
   },
 
-  cookies: {
+  // cookies: {
     
-    sessionToken: {
-      attributes: {
-        secure: true,
-        sameSite: "lax",
-        path: "/",
-        httpOnly:true
-      }
-    }
-  },
+  //   sessionToken: {
+  //     attributes: {
+  //       secure: true,
+  //       sameSite: "lax",
+  //       path: "/",
+  //       httpOnly:true
+  //     }
+  //   }
+  // },
 
   database: prismaAdapter(db, {
     provider: "postgresql",
@@ -53,4 +53,3 @@ export const auth = betterAuth({
     }
   }
 })
-//yahs
