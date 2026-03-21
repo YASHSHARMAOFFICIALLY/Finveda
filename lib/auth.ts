@@ -31,7 +31,7 @@ export const auth = betterAuth({
   //     }
   //   }
   // },
-  console.log("Runtime check1");
+
   database: prismaAdapter(db, {
     provider: "postgresql",
   }),
@@ -41,7 +41,7 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true
   },
-  console.log("Runtime check");
+  
 
   socialProviders: {
     google: {
